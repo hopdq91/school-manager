@@ -36,52 +36,45 @@
     <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
         <div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
             <ul class="kt-menu__nav ">
-                <li class="kt-menu__item " aria-haspopup="true"><a href="/admin" class="kt-menu__link "><span class="kt-menu__link-icon">
+                <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/dashboard')}}" class="kt-menu__link "><span class="kt-menu__link-icon">
                     <i class="fas fa-chart-line"></i></span><span class="kt-menu__link-text">Tổng quan</span></a></li>
                 <li class="kt-menu__section ">
-                    <h4 class="kt-menu__section-text">Bán hàng</h4>
+                    <h4 class="kt-menu__section-text">Quản lý trường học</h4>
                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                 </li>
-                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><i class="fas fa-truck"></i></i></span><span class="kt-menu__link-text">Đơn hàng</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><i class="fas fa-truck"></i></i></span><span class="kt-menu__link-text">Nhân sự</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
                         <ul class="kt-menu__subnav">
-                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Đơn hàng</span></span>
+                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Nhân sự</span></span>
                             </li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/oders/create" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Tạo đơn hàng online</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/oders" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Danh sách đơn hàng</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/oders/shipments" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Quản lý giao hàng</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/orders/returns" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Khách trả hàng</span></a></li>
-
+                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/user/teacher')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Giáo viên</span></a></li>
+                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/user/student')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Học sinh</span></a></li>
+                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/user/admin')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Admin</span></a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><i class="fas fa-users"></i></span>
-                    <span class="kt-menu__link-text">Khách hàng & đối tác</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                        <span class="kt-menu__link-icon"><i class="fas fa-truck"></i></i></span>
+                        <span class="kt-menu__link-text">Danh mục</span>
+                        <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                    </a>
                     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
                         <ul class="kt-menu__subnav">
-                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Khách hàng & đối tác</span></span></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/customers" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Khách hàng</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/customer_groups" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Nhóm khách hàng</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/suppliers" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Nhà cung cấp</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/shippers" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Đối tác vận chuyển</span></a></li>
+                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Nhân sự</span></span>
+                            </li>
+                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/category/class')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Lớp học</span></a></li>
+                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/category/subject')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Môn học</span></a></li>
+                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/category/course')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Khóa học</span></a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><i class="fas fa-dolly-flatbed"></i></span>
-                    <span class="kt-menu__link-text">Sản phẩm</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-                        <ul class="kt-menu__subnav">
-                            <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Sản phẩm</span></span></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/products" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Danh sách sản phẩm</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/variants" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Quản lý kho</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/purchase_orders" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Nhập hàng</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/stock_adjustments" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Kiểm hàng</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/stock_transfers" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Chuyển kho</span></a></li>
-                            <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/purchase_orders/returns" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Trả nhà cung cấp</span></a></li>
-                        </ul>
-                    </div>
+                <li class="kt-menu__item " aria-haspopup="true">
+                    <a href="/admin/settings" class="kt-menu__link ">
+                        <span class="kt-menu__link-icon"><i class="fas fa-cogs"></i></span>
+                        <span class="kt-menu__link-text">Cấu hình</span>
+                    </a>
                 </li>
-                <li class="kt-menu__item " aria-haspopup="true"><a href="/admin/settings" class="kt-menu__link "><span class="kt-menu__link-icon"><i class="fas fa-cogs"></i></span><span class="kt-menu__link-text">Cấu hình</span></a></li>
 
             </ul>
         </div>
