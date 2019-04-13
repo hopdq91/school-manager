@@ -47,6 +47,7 @@
                         <ul class="kt-menu__subnav">
                             <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Nhân sự</span></span>
                             </li>
+                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/user')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Danh sách nhân sự</span></a></li>
                             <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/user/teacher')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Giáo viên</span></a></li>
                             <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/user/student')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Học sinh</span></a></li>
                             <li class="kt-menu__item " aria-haspopup="true"><a href="{{ asset('/admin/user/admin')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Admin</span></a></li>
