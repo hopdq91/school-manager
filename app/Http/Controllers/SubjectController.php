@@ -36,9 +36,6 @@ class SubjectController extends Controller
             ->make(true);
     }
 
-
-
-
     public function indexview()
     {
         return view('admin.category.subject.index');
@@ -61,7 +58,7 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('subjects.create');
     }
 
     /**
@@ -72,51 +69,70 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'name' => 'required',
+            'detail' => 'required',
+        ]);
+
+        Subject::create($request->all());
+
+        return redirect()->route('subjects.index')
+                        ->with('success','Subject created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Subject $subject)
     {
-        //
+        return view('subjects.show',compact('subject'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Subject $subject)
     {
-        //
+        return view('subjects.edit',compact('subject'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Subject $subject)
     {
-        //
+         request()->validate([
+            'name' => 'required',
+            'detail' => 'required',
+        ]);
+
+        $subject->update($request->all());
+
+        return redirect()->route('subjects.index')
+                        ->with('success','Subject updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Subject $subject)
     {
-        //
+        $subject->delete();
+
+        return redirect()->route('subjects.index')
+                        ->with('success','Subject deleted successfully');
     }
 }

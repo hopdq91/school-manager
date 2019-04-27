@@ -85,6 +85,7 @@
                                             <th>Id</th>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Role</th>
                                             <th>Created At</th>
                                             <th>Updated At</th>
                                             <th>#</th>
@@ -134,7 +135,7 @@
             "sUrl": "",
            
         },
-        ajax: "{{ route('ajaxproducts.index') }}",
+        ajax: "{{ route('users.index') }}",
         columns: [{
                 data: 'id',
                 name: 'id'
@@ -146,6 +147,10 @@
             {
                 data: 'email',
                 name: 'email'
+            },
+            {
+                data: 'role',
+                name: 'role'
             },
             {
                 data: 'created_at',

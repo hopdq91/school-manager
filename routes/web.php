@@ -22,9 +22,11 @@ Route::get('/admin', 'HomeController@index')->name('home');
 
 //Route::get('datatables', 'UserController@anyData')->name('datatables.anyData');
 
-Route::resource('ajaxproducts','UserController');
-Route::resource('subjects','SubjectController');
-
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles','RoleController');
+    Route::resource('users','UserController');
+    Route::resource('subjects','SubjectController');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@index')->name('home');
